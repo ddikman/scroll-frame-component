@@ -47,7 +47,7 @@ function App() {
         <div className="preview">
           <div className="preview-label">LIVE PREVIEW <span>01 / 03</span></div>
           <ScrollFrame
-            src={`/samples/${device}.svg`}
+            src={`samples/${device}.svg`}
             alt={`Sample editorial website in a ${device} layout`}
             device={device}
             settings={settings}

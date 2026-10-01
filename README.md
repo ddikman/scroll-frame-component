@@ -10,6 +10,8 @@ ScrollFrame turns a tall website screenshot into an animated walkthrough inside 
 
 ## Try the example
 
+Live demo: https://ddikman.github.io/scroll-frame-component/
+
 ```bash
 npm install
 npm run dev
