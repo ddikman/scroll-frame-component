@@ -2,6 +2,12 @@
 
 ScrollFrame turns a tall website screenshot into an animated walkthrough inside a phone, tablet, or laptop frame. It moves down in smooth, slightly varied swipes, pauses between them, and returns quickly to the top. It uses React, CSS, and browser APIs without an animation library.
 
+<p align="center">
+  <img src="docs/demo-phone.gif" alt="A tall sample website scrolling inside a phone frame" width="151">
+  <img src="docs/demo-tablet.gif" alt="A tall sample website scrolling inside a tablet frame" width="219">
+  <img src="docs/demo-desktop.gif" alt="A tall sample website scrolling inside a laptop frame" width="401">
+</p>
+
 ## Try the example
 
 ```bash
@@ -71,5 +77,6 @@ MIT © 2026 David Dikman. See [LICENSE](LICENSE).
 - `src/ScrollFrame.tsx` — component and playback logic
 - `src/ScrollFrame.css` — device frames
 - `example/` — interactive demo and local sample artwork
+- `docs/` — demo GIFs of the phone, tablet, and laptop frames, recorded from the example
 - `scripts/generate_samples.py` — regenerate the demo artwork with Python's standard library
 - `AGENTS.md` — instructions for coding agents working in this repository
