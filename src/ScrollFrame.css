@@ -1,0 +1,106 @@
+.sf-frame {
+  box-sizing: border-box;
+  width: min(100%, var(--sf-width));
+  margin-inline: auto;
+  filter: drop-shadow(0 24px 22px rgb(37 39 43 / 15%));
+}
+
+.sf-frame *, .sf-frame *::before, .sf-frame *::after { box-sizing: border-box; }
+
+.sf-frame--phone { --sf-width: 320px; }
+.sf-frame--tablet { --sf-width: 590px; }
+.sf-frame--desktop { --sf-width: 940px; }
+
+.sf-device-body {
+  position: relative;
+  padding: 11px;
+  background: linear-gradient(130deg, #414d61, #222937 58%, #4c5664);
+  border: 1px solid #222935;
+  box-shadow: inset 0 0 0 2px #4b5667, inset 0 0 0 4px #202735;
+}
+
+.sf-frame--phone .sf-device-body { border-radius: 43px; }
+.sf-frame--tablet .sf-device-body {
+  padding: 20px;
+  border-radius: 32px;
+  background: linear-gradient(135deg, #38404a, #1d232c 60%, #424b58);
+}
+
+.sf-screen {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  background: #111318;
+  isolation: isolate;
+}
+
+.sf-frame--phone .sf-screen { aspect-ratio: 9 / 19.5; border-radius: 32px; }
+.sf-frame--tablet .sf-screen { aspect-ratio: 3 / 4; border-radius: 16px; }
+
+.sf-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: none;
+  user-select: none;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.sf-phone-notch {
+  position: absolute;
+  z-index: 2;
+  top: 11px;
+  left: 50%;
+  width: 43%;
+  height: 22px;
+  transform: translateX(-50%);
+  background: #1a202b;
+  border-radius: 0 0 14px 14px;
+}
+
+.sf-tablet-camera, .sf-laptop-camera {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: #111821;
+  box-shadow: inset 0 0 0 1px #596475;
+}
+
+.sf-tablet-camera { top: 8px; }
+
+.sf-laptop-lid {
+  position: relative;
+  padding: 18px 18px 15px;
+  border: 2px solid #4a4b4c;
+  border-radius: 18px 18px 5px 5px;
+  background: linear-gradient(#141516, #252627);
+  box-shadow: inset 0 0 0 2px #929596;
+}
+
+.sf-frame--desktop .sf-screen { aspect-ratio: 16 / 10; }
+.sf-laptop-camera { top: 7px; width: 4px; height: 4px; }
+
+.sf-laptop-base {
+  position: relative;
+  height: 21px;
+  width: 111%;
+  margin-left: -5.5%;
+  border-radius: 2px 2px 55% 55% / 2px 2px 75% 75%;
+  background: linear-gradient(#b7babb 0%, #686c70 42%, #c7c9c9 72%, #767b7e 100%);
+  box-shadow: inset 0 1px 1px #eff0f0, 0 5px 3px rgb(0 0 0 / 10%);
+}
+
+.sf-laptop-notch {
+  display: block;
+  width: 19%;
+  height: 9px;
+  margin: auto;
+  border-radius: 0 0 12px 12px;
+  background: linear-gradient(#818588, #acafb1);
+  box-shadow: inset 0 1px 2px rgb(0 0 0 / 20%);
+}
